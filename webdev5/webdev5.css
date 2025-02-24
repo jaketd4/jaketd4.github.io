@@ -122,3 +122,11 @@ body{
       18em 0 0 0.25em,
       19em 0 0 0.25em;
   }
+
+  .slide-text {
+    display: inline-block;
+    transition: transform 0.4s ease;
+  }
+  label input:checked + .slide-text {
+    transform: translateX(50px);
+  }

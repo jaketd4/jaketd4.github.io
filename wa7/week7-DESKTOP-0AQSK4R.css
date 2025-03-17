@@ -1,0 +1,64 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240, 226, 101);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(101, 203, 240);
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:red;
+}
+
+
+img{
+    width:30vw;
+    height: 60vh;
+}
+
+img:hover {
+    transition-duration: 1s;
+    width:50vw;
+    height:80vh;
+}
+
+#red-ball{
+    background-color: rgb(59,143,77);
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+}
+
+#Picasso{
+    position: relative;
+    animation-name: Picassomove;
+    animation-duration: 8s;
+}
+
+@keyframes Picassomove {
+    0% {
+      translate: 0 0;
+    }
+
+    25%{
+      translate: 25vw 0;
+    }
+
+    50%{
+      transl

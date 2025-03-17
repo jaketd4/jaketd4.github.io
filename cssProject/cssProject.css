@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.chakra-petch-light {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .chakra-petch-regular {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .chakra-petch-medium {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .chakra-petch-semibold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .chakra-petch-bold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .chakra-petch-light-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .chakra-petch-regular-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .chakra-petch-medium-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .chakra-petch-semibold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .chakra-petch-bold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    background-image: url(pngegg.png);
+    background-size:100% auto;
+    background-position:top center;
+    background-repeat: repeat-y;
+    width: flex;
+    min-height: 300px;
+
+    font-family: monospace;
+}
+.logo {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 900;
+    font-style: bold;
+    text-align: left;
+    padding: 3em;
+    background: linear-gradient(to top, rgb(205, 230, 245), rgba(255, 255, 255, 0.1));
+}
+nav {
+    background-color: rgb(205, 230, 245);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: .5em;
+    border-bottom: 4px solid rgb(0, 0, 0);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content:space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav a {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    color: rgb(0, 0, 0);
+    padding: .5em 1em;
+  }
+
+  .title-1 {
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: left;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+  }
+
+  .title-1:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: left;
+  }
+
+  .concert-1 {
+
+        width: 100%; 
+        height: flex;
+        padding: 20px; 
+        border: 3px solid rgb(0, 0, 0); 
+        border-radius: 10%;
+        background-color: rgba(190, 205, 207, .5);
+        font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+        font-size: 18px;
+         font-weight: bold;
+         font-stretch:wider;
+         margin: 20px auto; 
+         
+  }
+
+  .concert-1:hover {
+    background-color: rgba(190, 205, 207, 1);
+    transition-duration: 1s
+  }
+
+  .title-2 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: right;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+  }
+
+  .title-2:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: right;
+  }
+
+  .concert-2 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 10%;
+    background-color: rgba(66, 95, 158, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: right;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-2:hover {
+    background-color: rgba(66, 95, 158, 1);
+    transition-duration: 1s
+  }
+
+.title-3 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: left;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+.title-3:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: left;
+  }
+
+.concert-3 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 10%;
+    background-color: rgba(190, 205, 207, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-3:hover {
+    background-color: rgba(190, 205, 207, 1);
+    transition-duration: 1s
+  }
+
+.title-4 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: right;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+.title-4:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: right;
+  }
+
+.concert-4 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 10%;
+    background-color: rgba(66, 95, 158, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: right;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-4:hover {
+    background-color: rgba(66, 95, 158, 1);
+    transition-duration: 1s
+  }
+
+.title-5 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: left;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+.title-5:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: left;
+  }
+
+.concert-5 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 10%;
+    background-color: rgba(190, 205, 207, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-5:hover {
+    background-color: rgba(190, 205, 207, 1);
+    transition-duration: 1s
+  }
+
+.title-6 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: right;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+  }
+
+  .title-6:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: right;
+  }
+
+.concert-6 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10%; 
+    background-color: rgba(66, 95, 158, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: right;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-6:hover {
+    background-color: rgba(66, 95, 158, 1);
+    transition-duration: 1s
+  }
+
+.title-7 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: left;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+.title-7:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: left;
+  }
+
+.concert-7 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 10%;
+    background-color: rgba(190, 205, 207, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-7:hover {
+    background-color: rgba(190, 205, 207, 1);
+    transition-duration: 1s
+  }
+
+.title-8 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: right;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+  }
+
+  .title-8:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: right;
+  }
+
+.concert-8 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 10%;
+    background-color: rgba(66, 95, 158, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: right;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-8:hover {
+    background-color: rgba(66, 95, 158, 1);
+    transition-duration: 1s
+  }
+
+.title-9 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: left;
+    text-decoration: underline;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+
+.title-9:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: left;
+  }
+
+.concert-9 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10%;
+    background-color: rgba(190, 205, 207, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    text-align: left;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-9:hover {
+    background-color: rgba(190, 205, 207, 1);
+    transition-duration: 1s
+  }
+
+.title-10 {
+    font-family: "Chakra Petch", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    text-align: right;
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+.title-10:hover{
+    transition-duration: 1s;
+    transform: scale(1.2);
+    transform-origin: right;
+  }
+
+.concert-10 {
+    width: flex; 
+    height: flex;
+    padding: 20px; 
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10%;
+    background-color: rgba(66, 95, 158, .5);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: right;
+    font-size: 18px;
+     font-weight: bold;
+     margin: 20px auto; 
+}
+
+.concert-10:hover {
+    background-color: rgba(66, 95, 158, 1);
+    transition-duration: 1s
+  }

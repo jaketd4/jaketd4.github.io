@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number & Background Color</title>
+</head>
+<body>
+    <p id="number">Click the button for a random number!</p>
+    <button onclick="generateNumber()">click me to change the number!</button>
+    <button onclick="changeColor()">click me to change the background color!</button>
+
+    <script>
+        function generateNumber() {
+            let randomNum = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("number").innerHTML = "Random Number: " + randomNum;
+        }
+
+        function changeColor() {
+            let colors = ["white", "black"];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
+

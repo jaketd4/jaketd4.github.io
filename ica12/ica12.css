@@ -9,10 +9,25 @@ html {
     margin: 0;
     padding: 0;
   }
+ 
+  .codystar-light {
+    font-family: "Codystar", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .codystar-regular {
+    font-family: "Codystar", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
   
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: #c9bd95;
+    font-family: "Codystar", sans-serif;
+    font-weight: 300;
+    font-style: bold;
+    font-size: larger;
+    background-color: #000000;
   }
   
   .app {
@@ -21,9 +36,9 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    background-color: #CAD8DE;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.286), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
   }
   
   header {
@@ -31,7 +46,7 @@ html {
     font-size: 30px;
     text-align: center;
     padding: 10px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #CAD8DE;
   }
   
   .quotes {
@@ -42,7 +57,7 @@ html {
   .quote-text {
     padding-bottom: 20px;
     font-size: 25px;
-    color: black;
+    color: rgb(41, 75, 80);
   }
   
   .controls {
@@ -53,7 +68,7 @@ html {
   .button {
     display: block;
     color: white;
-    border-radius: 4px;
+    border-radius: 20px;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -64,21 +79,21 @@ html {
   }
   
   .twitter {
-    background-color: #1da1f2;
+    background-color: #0280907f;
     text-decoration: none;
   }
   
   .twitter:hover {
-    background-color: #1e7fbb;
+    background-color: #028090;
   }
   
   .new-quote {
-    background-color: #4A2B0F;
+    background-color: #ffa69e9e;
     margin-bottom: 15px;
   }
   
   .new-quote:hover {
-    background-color: #6d3b0e;
+    background-color: #FFA69E;
   }
   
   .new-quote:disabled {

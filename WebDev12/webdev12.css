@@ -1,0 +1,14 @@
+body {
+    background: radial-gradient(#000000 60%, #349e9b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+
+canvas {
+  border-radius: 50%;
+  overflow: hidden;
+}

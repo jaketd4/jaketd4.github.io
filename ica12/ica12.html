@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ica12.css">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div class="app">
-        <header>Random Christmas Trivia</header>
+        <header><b>Random Christmas Trivia</b></header>
         <section class="quotes">
           <div class="quote-text" id="js-quote-text"></div>
           <div class="quote-text" id="js-answer-text"></div>
@@ -27,10 +28,16 @@
       <script>
     
       var newBtn = document.querySelector('#js-new-quote').addEventListener('click',getQuote);
+      var answerBtn = document.querySelector('#js-tweet').addEventListener('click',displayAnswer);
 
       var endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion";
 
-      async function getquote() {
+      let current = {
+        question: "",
+        answer: ""
+      };
+
+      async function getQuote() {
         try {
           const response = await fetch(endpoint);
 
@@ -43,6 +50,10 @@
           //console.log();
           displayQuote(json.question);
 
+          current.question = json.question;
+          current.answer = json.answer;
+
+
         } catch(err) {
           console.log(err);
           alert('Fail');
@@ -50,8 +61,13 @@
      }
 
       function displayQuote(quote) {
-        const quoteText = document.querySelectory('#js-quote-text');
+        const quoteText = document.querySelector('#js-quote-text');
         quoteText.textContent = quote;
+      }
+
+      function displayAnswer(answer) {
+        const answerText = document.querySelector('#js-answer-text');
+        answerText.textContent =current.answer;
       }
         
     </script>

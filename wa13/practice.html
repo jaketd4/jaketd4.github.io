@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Fetch and Manipulate</title>
+</head>
+<body>
+    <script>
+        const exampleJSON = 'example.json';
+
+        async function fetchPeople(exampleJSON) {
+            try {
+                let response = await fetch(exampleJSON);
+                let data = await response.json();
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+
+                let first_data = JSON.parse(JSON.stringify(data));
+                console.log("Current Data");
+                console.log(first_data);
+
+                data.department = {
+                    name: "four-star complex",
+                    residents: data.people
+                };
+                delete data.people;
+
+                let second_data = JSON.parse(JSON.stringify(data));
+                console.log("After adding apartment");
+                console.log(second_data);
+
+                let new_person = { "first_name": "joe", "last_name": "jack", "age": 30 }
+                data.department.residents.push(new_person);
+
+                let third_data = JSON.parse(JSON.stringify(data));
+                console.log("After adding new person");
+                console.log(third_data);
+
+            } 
+            catch (error) {
+                console.error('Error fetching json data:', error);
+            }
+        }
+
+        fetchPeople(exampleJSON);
+    </script>
+</body>
+</html>

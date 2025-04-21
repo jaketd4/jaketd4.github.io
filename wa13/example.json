@@ -1,0 +1,23 @@
+{
+    "people" : [
+        {
+            "first_name": "Sam",
+            "last_name" : "bumbo",
+            "age": 27,
+            "good_vibes": true
+            
+        },
+        {
+           "first_name": "joey",
+           "last_name": "pelletier",
+           "age": 21,
+           "good_vibes": true 
+        },
+        {
+            "first_name": "Marco",
+            "last_name": "David",
+            "age": 29,
+            "good_vibes": true
+        }
+    ]
+}

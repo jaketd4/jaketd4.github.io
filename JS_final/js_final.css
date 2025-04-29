@@ -1,0 +1,61 @@
+
+        h1 {
+            padding:3rem;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #86E7B8;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #c8ffca;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 0.5rem solid white; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        #number {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: navy;
+            transition: color 0.3s ease;
+        }
+        button {
+            background-color: #F2F5DE;
+            color: #68b28e;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+        button:hover {
+            background-color: #eeebc3;
+        }
+        #savedNumbers {
+            background: #F2F5DE;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 0.5rem solid white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        #savedNumbers h3 {
+            margin-top: 0;
+            color:navy;
+        }
+        .saved-number {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+            color:navy;
+        }

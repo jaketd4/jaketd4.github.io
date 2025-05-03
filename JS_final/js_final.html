@@ -9,60 +9,76 @@
 <body>
     <h1> Click Start to Find Your Phone Number!</h1>
 
-    <div class="container">
-        <div id="number">000-000-000</div>
-        <button onclick="toggleRandomNumber()" id="toggleButton">Start the Phone Finder!</button>
-        <button onclick="saveNumber()">Save Your Number</button>
-    </div>
+    <body>
 
-    <div id="savedNumbers">
-        <h3>Is this Your Number?</h3>
-    </div>
-
-    <script>
-        let intervalId;
-        let isRunning = true;
-
-        function formatPhoneNumber(number) {
-            const numStr = number.toString();
-            return numStr.slice(0, 3) + '-' + numStr.slice(3, 6) + '-' + numStr.slice(6);
-        }
-
-        function startRandomNumber() {
-            document.getElementById('number').style.color = 'green';
-            intervalId = setInterval(() => {
-                const randomNumber = Math.floor(Math.random() * 9000000000) + 1000000000;
-                document.getElementById('number').textContent = formatPhoneNumber(randomNumber);
-            }, 100);
-        }
-
-        function stopRandomNumber() {
-            clearInterval(intervalId);
-            document.getElementById('number').style.color = 'navy';
-        }
-
-        function toggleRandomNumber() {
-            if (isRunning) {
-                stopRandomNumber();
-                document.getElementById('toggleButton').textContent = 'Start the Phone Finder!';
-            } else {
-                startRandomNumber();
-                document.getElementById('toggleButton').textContent = 'Stop the Phone Finder :(';
+        <div class="container">
+            <div id="number">
+                <span id="seg1" class="segment">000</span>-
+                <span id="seg2" class="segment">000</span>-
+                <span id="seg3" class="segment">0000</span>
+            </div>
+            <button onclick="toggleSegment(1)" id="btn1">Stop!</button>
+            <button onclick="toggleSegment(2)" id="btn2">Stop!</button>
+            <button onclick="toggleSegment(3)" id="btn3">Stop!</button>
+            <button onclick="saveNumber()">Submit Your Number</button>
+        </div>
+    
+        <div id="savedNumbers">
+            <h3>Did you find your number?</h3>
+        </div>
+    
+        <script>
+            let intervals = [null, null, null];
+            let running = [true, true, true];
+    
+            function randomSegment(length) {
+                let min = Math.pow(10, length - 1);
+                let max = Math.pow(10, length) - 1;
+                return Math.floor(Math.random() * (max - min + 1)) + min;
             }
-            isRunning = !isRunning;
-        }
-
-        function saveNumber() {
-            const number = document.getElementById('number').textContent;
-            const savedNumbersContainer = document.getElementById('savedNumbers');
-            const numberElement = document.createElement('div');
-            numberElement.className = 'saved-number';
-            numberElement.textContent = number;
-            savedNumbersContainer.appendChild(numberElement);
-        }
-
-        window.onload = startRandomNumber;
-    </script>
-
+    
+            function startSegment(index, length) {
+                const element = document.getElementById(`seg${index}`);
+                intervals[index - 1] = setInterval(() => {
+                    element.textContent = randomSegment(length);
+                    element.style.color = 'red';
+                }, 100);
+            }
+    
+            function stopSegment(index) {
+                clearInterval(intervals[index - 1]);
+                document.getElementById(`seg${index}`).style.color = 'navy';
+            }
+    
+            function toggleSegment(index) {
+                const button = document.getElementById(`btn${index}`);
+                const length = index === 3 ? 3 : 3;
+                if (running[index - 1]) {
+                    stopSegment(index);
+                    button.textContent = index === 1 ? 'Start Area Code' : index === 2 ? 'Start' : 'Start';
+                } else {
+                    startSegment(index, length);
+                    button.textContent = index === 1 ? 'Stop Area Code' : index === 2 ? 'Stop' : 'Stop';
+                }
+                running[index - 1] = !running[index - 1];
+            }
+    
+            function saveNumber() {
+                const num = `${document.getElementById('seg1').textContent}-` +
+                            `${document.getElementById('seg2').textContent}-` +
+                            `${document.getElementById('seg3').textContent}`;
+                const container = document.getElementById('savedNumbers');
+                const div = document.createElement('div');
+                div.className = 'saved-number';
+                div.textContent = num;
+                container.appendChild(div);
+            }
+    
+            window.onload = () => {
+                startSegment(1, 3);
+                startSegment(2, 3);
+                startSegment(3, 4);
+            };
+        </script>
 </body>
 </html>
